@@ -38,6 +38,7 @@ func getShardIterator(k kinesisiface.KinesisAPI, streamName string, shardID stri
 		ps = nil
 	}
 
+	log.Printf("Get shard iterator for shard %s, seqnum %s", shardID, sequenceNumber)
 	resp, err := k.GetShardIterator(&kinesis.GetShardIteratorInput{
 		ShardId:                aws.String(shardID),
 		ShardIteratorType:      &shardIteratorType,
@@ -70,6 +71,7 @@ func getRecords(k kinesisiface.KinesisAPI, iterator string) (records []*kinesis.
 // captureShard blocks until we capture the given shardID
 func (k *Kinsumer) captureShard(shardID string) (*checkpointer, error) {
 	// Attempt to capture the shard in dynamo
+	log.Printf("Starting capture of shard %s", shardID)
 	for {
 		// Ask the checkpointer to capture the shard
 		checkpointer, err := capture(
@@ -81,16 +83,19 @@ func (k *Kinsumer) captureShard(shardID string) (*checkpointer, error) {
 			k.maxAgeForClientRecord,
 			k.config.stats)
 		if err != nil {
+			log.Printf("Error capturing shard %s", shardID)
 			return nil, err
 		}
 
 		if checkpointer != nil {
+			log.Printf("Captured shard %s", shardID)
 			return checkpointer, nil
 		}
 
 		// Throttle requests so that we don't hammer dynamo
 		select {
 		case <-k.stop:
+			log.Printf("Asked to stop capturing shard %s", shardID)
 			// If we are told to stop consuming we should stop attempting to capture
 			return nil, nil
 		case <-time.After(k.config.throttleDelay):
@@ -128,6 +133,7 @@ func (k *Kinsumer) consume(shardID string) {
 	finished := false
 	// Make sure we release the shard when we are done.
 	defer func() {
+		log.Printf("Releasing shard %s", shardID)
 		innerErr := checkpointer.release()
 		if innerErr != nil {
 			k.shardErrors <- shardConsumerError{shardID: shardID, action: "checkpointer.release", err: innerErr}
@@ -152,6 +158,7 @@ mainloop:
 	for {
 		// We have reached the end of the shard's data. Set Finished in dynamo and stop processing.
 		if iterator == "" && !finished {
+			log.Printf("Finished shard %s, last seqnum %s", shardID, lastSeqNum)
 			checkpointer.finish(lastSeqNum)
 			finished = true
 		}
@@ -167,6 +174,7 @@ mainloop:
 				return
 			}
 			if finishCommitted {
+				log.Printf("Committed finish for shard %s", shardID)
 				return
 			}
 			// Go back to waiting for a throttle/stop.
@@ -220,6 +228,7 @@ mainloop:
 							return
 						}
 					case <-k.stop:
+						log.Printf("Stopping shard %s", shardID)
 						return
 					case k.records <- &consumedRecord{
 						record:       record,
