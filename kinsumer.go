@@ -260,6 +260,19 @@ func (k *Kinsumer) dynamoCreateTableIfNotExists(name, distKey string) error {
 	if k.dynamoTableExists(name) {
 		return nil
 	}
+	if name == k.metadataTableName {
+		// If the metadata table is being created for the first time
+		// the loadShardIDsFromDynamo() call in refreshShards() will
+		// always return an empty shard list.
+		//
+		// This would cause the consumer to wait until the next leader
+		// election to start receiving events, because that's the only
+		// time loadShardIDsFromKinesis() is called.
+		//
+		// To fix this, we mark this run as "first run", which can be
+		// used by refreshShards() to skip the cache.
+		atomic.StoreInt32(&k.firstRun, 1)
+	}
 	_, err := k.dynamodb.CreateTable(&dynamodb.CreateTableInput{
 		AttributeDefinitions: []*dynamodb.AttributeDefinition{{
 			AttributeName: aws.String(distKey),
@@ -293,19 +306,6 @@ func (k *Kinsumer) dynamoCreateTableIfNotExists(name, distKey string) error {
 func (k *Kinsumer) dynamoDeleteTableIfExists(name string) error {
 	if !k.dynamoTableExists(name) {
 		return nil
-	}
-	if name == k.metadataTableName {
-		// If the metadata table is being created for the first time
-		// the loadShardIDsFromDynamo() call in refreshShards() will
-		// always return an empty shard list.
-		//
-		// This would cause the consumer to wait until the next leader
-		// election to start receiving events, because that's the only
-		// time loadShardIDsFromKinesis() is called.
-		//
-		// To fix this, we mark this run as "first run", which can be
-		// used by refreshShards() to skip the cache.
-		atomic.StoreInt32(&k.firstRun, 1)
 	}
 	_, err := k.dynamodb.DeleteTable(&dynamodb.DeleteTableInput{
 		TableName: aws.String(name),
