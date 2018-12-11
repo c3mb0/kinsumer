@@ -55,8 +55,9 @@ type Kinsumer struct {
 	thisClient            int                       // The (sorted by name) index of this client in the total list
 	config                Config                    // configuration struct
 	numberOfRuns          int32                     // Used to atomically make sure we only ever allow one Run() to be called
-	isLeader              bool                      // Whether this client is the leader
-	leaderLost            chan bool                 // Channel that receives an event when the node loses leadership
+	leader                int32                     // Whether this client is the leader, read/write atomically
+	firstRun              int32                     // Used to skip dynamodb shard cache on first start
+	leaderLost            chan struct{}             // Channel that receives an event when the node loses leadership
 	leaderWG              sync.WaitGroup            // waitGroup for the leader loop
 	maxAgeForClientRecord time.Duration             // Cutoff for client/checkpoint records we read from dynamodb before we assume the record is stale
 	maxAgeForLeaderRecord time.Duration             // Cutoff for leader/shard cache records we read from dynamodb before we assume the record is stale
@@ -150,13 +151,22 @@ func (k *Kinsumer) refreshShards() (bool, error) {
 		return false, ErrThisClientNotInDynamo
 	}
 
-	if thisClient == 0 && !k.isLeader {
+	if thisClient == 0 && !k.isLeader() {
 		k.becomeLeader()
-	} else if thisClient != 0 && k.isLeader {
+	} else if thisClient != 0 && k.isLeader() {
 		k.unbecomeLeader()
 	}
 
-	shardIDs, err = loadShardIDsFromDynamo(k.dynamodb, k.metadataTableName)
+	//shardIDs, err = loadShardIDsFromDynamo(k.dynamodb, k.metadataTableName)
+	firstRun := atomic.CompareAndSwapInt32(&k.firstRun, 1, 0)
+	if firstRun {
+		shardIDs, err = loadShardIDsFromKinesis(k.kinesis, k.streamName)
+		if err == nil {
+			err = k.setCachedShardIDs(shardIDs)
+		}
+	} else {
+		shardIDs, err = loadShardIDsFromDynamo(k.dynamodb, k.metadataTableName)
+	}
 	if err != nil {
 		return false, err
 	}
@@ -284,6 +294,19 @@ func (k *Kinsumer) dynamoDeleteTableIfExists(name string) error {
 	if !k.dynamoTableExists(name) {
 		return nil
 	}
+	if name == k.metadataTableName {
+		// If the metadata table is being created for the first time
+		// the loadShardIDsFromDynamo() call in refreshShards() will
+		// always return an empty shard list.
+		//
+		// This would cause the consumer to wait until the next leader
+		// election to start receiving events, because that's the only
+		// time loadShardIDsFromKinesis() is called.
+		//
+		// To fix this, we mark this run as "first run", which can be
+		// used by refreshShards() to skip the cache.
+		atomic.StoreInt32(&k.firstRun, 1)
+	}
 	_, err := k.dynamodb.DeleteTable(&dynamodb.DeleteTableInput{
 		TableName: aws.String(name),
 	})
@@ -357,10 +380,10 @@ func (k *Kinsumer) Run() error {
 			if err != nil {
 				k.errors <- fmt.Errorf("error deregistering client: %s", err)
 			}
-			if k.isLeader {
+			if k.isLeader() {
 				close(k.leaderLost)
 				k.leaderLost = nil
-				k.isLeader = false
+				atomic.StoreInt32(&k.leader, 0)
 			}
 			// Do this outside the k.isLeader check in case k.isLeader was false because
 			// we lost leadership but haven't had time to shutdown the goroutine yet.

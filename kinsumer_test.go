@@ -414,18 +414,18 @@ func TestLeader(t *testing.T) {
 	require.NoError(t, err, "Problem getting old client")
 	require.Equal(t, 0, len(resp.Item), "Old client was not deleted")
 
-	assert.Equal(t, true, clients[0].isLeader, "First client is not leader")
-	assert.Equal(t, false, clients[1].isLeader, "Second leader is also leader")
+	assert.Equal(t, true, clients[0].isLeader(), "First client is not leader")
+	assert.Equal(t, false, clients[1].isLeader(), "Second leader is also leader")
 
 	c, err := NewWithInterfaces(k, d, *streamName, *applicationName, fmt.Sprintf("_test_%d", numberOfClients), config)
 	require.NoError(t, err, "NewWithInterfaces() failed")
 	c.clientID = "0"
 	err = c.Run()
 	require.NoError(t, err, "kinsumer.Run() failed")
-	require.Equal(t, true, c.isLeader, "New client is not leader")
+	require.Equal(t, true, c.isLeader(), "New client is not leader")
 	_, err = clients[0].refreshShards()
 	require.NoError(t, err, "Problem refreshing shards of original leader")
-	require.Equal(t, false, clients[0].isLeader, "Original leader is still leader")
+	require.Equal(t, false, clients[0].isLeader(), "Original leader is still leader")
 	c.Stop()
 
 	for ci, client := range clients {

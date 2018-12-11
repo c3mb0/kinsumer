@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"sort"
+	"sync/atomic"
 	"time"
 
 	"github.com/aws/aws-sdk-go/aws"
@@ -35,10 +36,10 @@ type shardCacheRecord struct {
 // becomeLeader starts the leadership goroutine with a channel to stop it.
 // TODO(dwe): Factor out dependencies and unit test
 func (k *Kinsumer) becomeLeader() {
-	if k.isLeader {
+	if k.isLeader() {
 		return
 	}
-	k.leaderLost = make(chan bool)
+	k.leaderLost = make(chan struct{})
 	k.leaderWG.Add(1)
 	go func() {
 		defer k.leaderWG.Done()
@@ -81,12 +82,12 @@ func (k *Kinsumer) becomeLeader() {
 			}
 		}
 	}()
-	k.isLeader = true
+	atomic.StoreInt32(&k.leader, 1)
 }
 
 // unbecomeLeader stops the leadership goroutine.
 func (k *Kinsumer) unbecomeLeader() {
-	if !k.isLeader {
+	if !k.isLeader() {
 		return
 	}
 	if k.leaderLost == nil {
@@ -96,7 +97,7 @@ func (k *Kinsumer) unbecomeLeader() {
 		k.leaderWG.Wait()
 		k.leaderLost = nil
 	}
-	k.isLeader = false
+	atomic.StoreInt32(&k.leader, 0)
 }
 
 // performLeaderActions updates the shard ID cache and reaps old clients
@@ -268,33 +269,22 @@ func (k *Kinsumer) registerLeadership() (bool, error) {
 // you should use the cache, returned by loadShardIDsFromDynamo below.
 //TODO: Write unit test - needs kinesis mocking
 func loadShardIDsFromKinesis(kin kinesisiface.KinesisAPI, streamName string) ([]string, error) {
-	var (
-		innerError error
-		shards     []*kinesis.Shard
-	)
+	var	innerError error
 
-	params := &kinesis.DescribeStreamInput{
+	res, err := kin.ListShards(&kinesis.ListShardsInput{
 		StreamName: aws.String(streamName),
-		Limit:      aws.Int64(10000),
-	}
-
-	err := kin.DescribeStreamPages(params, func(page *kinesis.DescribeStreamOutput, _ bool) bool {
-		if page == nil || page.StreamDescription == nil {
-			innerError = ErrKinesisCantDescribeStream
-			return false
-		}
-
-		switch aws.StringValue(page.StreamDescription.StreamStatus) {
-		case "CREATING":
-			innerError = ErrKinesisBeingCreated
-			return false
-		case "DELETING":
-			innerError = ErrKinesisBeingDeleted
-			return false
-		}
-		shards = append(shards, page.StreamDescription.Shards...)
-		return aws.BoolValue(page.StreamDescription.HasMoreShards)
 	})
+
+	if err != nil {
+		if e, ok := err.(awserr.Error); ok {
+			switch e.Code() {
+			case "ResourceInUseException":
+				innerError = ErrStreamBusy
+			case "ResourceNotFoundException":
+				innerError = ErrNoSuchStream
+			}
+		}
+	}
 
 	if innerError != nil {
 		return nil, innerError
@@ -304,8 +294,8 @@ func loadShardIDsFromKinesis(kin kinesisiface.KinesisAPI, streamName string) ([]
 		return nil, err
 	}
 
-	shardIDs := make([]string, len(shards))
-	for i, s := range shards {
+	shardIDs := make([]string, len(res.Shards))
+	for i, s := range res.Shards {
 		shardIDs[i] = aws.StringValue(s.ShardId)
 	}
 	sort.Strings(shardIDs)
@@ -345,4 +335,8 @@ func loadShardCacheFromDynamo(db dynamodbiface.DynamoDBAPI, tableName string) (*
 		return nil, err
 	}
 	return &record, nil
+}
+
+func (k *Kinsumer) isLeader() bool {
+	return atomic.LoadInt32(&k.leader) == 1
 }

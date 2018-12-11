@@ -1,0 +1,3282 @@
+--- FAIL: TestLeader (1.14s)
+    kinsumer_test.go:611: Got all 4321 out of 4321 events
+    kinsumer_test.go:417: 
+        	Error Trace:	kinsumer_test.go:417
+        	Error:      	Invalid operation: true == (func() bool)(0x7fdfc0) (cannot take func type as argument)
+        	Test:       	TestLeader
+        	Messages:   	First client is not leader
+    kinsumer_test.go:418: 
+        	Error Trace:	kinsumer_test.go:418
+        	Error:      	Invalid operation: false == (func() bool)(0x7fdfc0) (cannot take func type as argument)
+        	Test:       	TestLeader
+        	Messages:   	Second leader is also leader
+    require.go:157: 
+        	Error Trace:	kinsumer_test.go:425
+        	Error:      	Invalid operation: true == (func() bool)(0x7fdfc0) (cannot take func type as argument)
+        	Test:       	TestLeader
+        	Messages:   	New client is not leader
+2018/12/11 13:41:07 Got error: Shard shardId-000000000000 in stream kinsumer_test under account 000000000000 does not exist (%!s(<nil>)) retry count is 0 / 3
+--- FAIL: TestSplit (5.79s)
+    kinsumer_test.go:611: Got all 3015 out of 4321 events
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 15
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 16
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 31
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 46
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 50
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 60
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 66
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 68
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 82
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 145
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 153
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 155
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 156
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 167
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 177
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 239
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 256
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 277
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 282
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 296
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 314
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 320
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 348
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 350
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 361
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 371
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 385
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 387
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 392
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 402
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 405
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 416
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 423
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 424
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 428
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 452
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 470
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 485
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 509
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 553
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 581
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 592
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 606
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 623
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 641
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 653
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 654
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 658
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 667
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 679
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 741
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 761
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 770
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 775
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 776
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 780
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 801
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 818
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 836
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 848
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 856
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 881
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 885
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 886
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 892
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 893
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 895
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 908
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 915
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 922
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 930
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 932
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 933
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 939
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 973
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 974
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 977
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 999
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1001
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1013
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1024
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1027
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1028
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1060
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1073
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1082
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1146
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1148
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1153
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1154
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1161
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1173
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1175
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1182
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1183
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1201
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1208
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1234
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1240
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1242
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1245
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1258
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1282
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1286
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1299
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1306
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1346
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1357
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1360
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1364
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1379
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1399
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1427
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1434
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1452
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1463
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1473
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1498
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1506
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1511
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1516
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1529
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1542
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1551
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1560
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1562
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1563
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1611
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1612
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1641
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1667
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1688
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1705
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1764
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1780
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1786
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1813
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1823
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1843
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1853
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1866
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1873
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1878
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1893
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1907
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1917
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1920
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1946
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1949
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1953
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1966
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1967
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1976
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1980
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1985
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1986
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1995
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1998
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2026
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2033
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2048
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2050
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2079
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2083
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2087
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2092
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2098
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2106
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2111
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2126
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2128
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2149
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2155
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2164
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2167
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2172
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2173
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2194
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2196
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2204
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2205
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2213
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2218
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2223
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2233
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2234
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2250
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2287
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2289
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2304
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2333
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2338
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2339
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2349
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2350
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2363
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2372
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2402
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2423
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2431
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2460
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2462
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2495
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2499
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2505
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2531
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2538
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2550
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2556
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2592
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2611
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2615
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2616
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2640
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2647
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2649
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2652
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2655
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2658
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2678
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2683
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2686
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2697
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2700
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2702
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2707
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2728
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2746
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2749
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2751
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2762
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2769
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2772
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2787
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2849
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2910
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2932
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2945
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2958
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2964
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2992
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3022
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3024
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3026
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3029
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3112
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3125
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3144
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3159
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3169
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3177
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3178
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3211
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3235
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3248
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3255
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3259
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3279
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3327
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3328
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3339
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3355
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3356
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3370
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3371
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3377
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3380
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3388
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3397
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3405
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3427
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3461
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3464
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3526
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3532
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3570
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3571
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3590
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3599
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3611
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3614
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3636
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3646
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3657
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3662
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3663
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3680
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3681
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3697
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3701
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3702
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3709
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3713
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3714
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3737
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3744
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3755
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3756
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3786
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3792
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3798
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3801
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3822
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3827
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3842
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3846
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3897
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3900
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3909
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3913
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3918
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3943
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3959
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3997
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4001
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4003
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4017
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4031
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4043
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4087
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4140
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4151
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4154
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4156
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4170
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4177
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4194
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4195
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4200
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4215
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4221
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4226
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4227
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4231
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4266
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4274
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4280
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4285
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4305
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4310
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4320
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 35
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 112
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 311
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 520
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 645
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 670
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 794
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1000
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1020
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1081
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1143
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1149
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1276
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1466
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1500
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1510
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1548
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1699
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1726
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1827
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1845
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1930
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 1989
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2117
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2243
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2346
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2528
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2682
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2823
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 2957
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3002
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3092
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3100
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3135
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3180
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3228
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3308
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3379
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3484
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3519
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3555
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3574
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3669
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3715
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3719
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 3815
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4006
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4105
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4124
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 4141
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 7
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 9
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 18
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 19
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 28
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 44
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 48
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 77
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 84
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 93
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 100
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 120
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 130
+    kinsumer_test.go:600: 
+        	Error Trace:	kinsumer_test.go:600
+        	            				kinsumer_test.go:553
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestSplit
+        	Messages:   	Got duplicate event 135
+    kinsumer_test.go:611: Got all 4321 out of 4321 events
+    require.go:157: 
+        	Error Trace:	kinsumer_test.go:565
+        	Error:      	Not equal: 
+        	            	expected: []string{"shardId-000000000002", "shardId-000000000003", "shardId-000000000004", "shardId-000000000005", "shardId-000000000006", "shardId-000000000007", "shardId-000000000008", "shardId-000000000009", "shardId-000000000010"}
+        	            	actual  : []string{"shardId-000000000000", "shardId-000000000002", "shardId-000000000003", "shardId-000000000004", "shardId-000000000005", "shardId-000000000006", "shardId-000000000007", "shardId-000000000008", "shardId-000000000009", "shardId-000000000010"}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1,2 +1,3 @@
+        	            	-([]string) (len=9) {
+        	            	+([]string) (len=10) {
+        	            	+ (string) (len=20) "shardId-000000000000",
+        	            	  (string) (len=20) "shardId-000000000002",
+        	Test:       	TestSplit
+        	Messages:   	Finished shards are still in the cache
+FAIL
+FAIL	github.com/twitchscience/kinsumer	8.528s
+?   	github.com/twitchscience/kinsumer/cmd/noopkinsumer	[no test files]
+ok  	github.com/twitchscience/kinsumer/mocks	(cached)
+?   	github.com/twitchscience/kinsumer/statsd	[no test files]
